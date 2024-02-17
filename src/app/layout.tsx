@@ -1,12 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import { jostFont } from "@/styles/fonts";
+import "@/styles/globals.css";
 
 export const metadata: Metadata = {
   title: "Feedback Me",
-  description: "App to ",
+  description: "App to manage feedback",
 };
 
 export default function RootLayout({
@@ -16,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={jostFont.className}>{children}</body>
     </html>
   );
 }
