@@ -8,6 +8,10 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    borderRadius: {
+      sm: "5px",
+      DEFAULT: "10px",
+    },
     extend: {
       colors: appColors,
     },

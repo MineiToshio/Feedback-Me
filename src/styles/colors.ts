@@ -16,6 +16,10 @@ const colors = {
     DEFAULT: "#7C91F9",
   },
   error: {
+    light: "#D73737",
+    DEFAULT: "#D73737",
+  },
+  "error-hover": {
     light: "#E98888",
     DEFAULT: "#E98888",
   },
@@ -35,6 +39,10 @@ const colors = {
     light: "#3A4374",
     DEFAULT: "#3A4374",
   },
+  "text-hover": {
+    light: "#656EA3",
+    DEFAULT: "#656EA3",
+  },
   header: {
     light: "#373F68",
     DEFAULT: "#373F68",
@@ -46,6 +54,10 @@ const colors = {
   live: {
     light: "#62BCFA",
     DEFAULT: "#62BCFA",
+  },
+  link: {
+    light: "#647196",
+    DEFAULT: "#647196",
   },
 };
 
