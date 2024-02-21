@@ -8,7 +8,7 @@ const CheckIcon: FC<CheckIconProps> = ({ ...props }) => {
       <path
         fill="none"
         stroke="#AD1FEA"
-        stroke-width="2"
+        strokeWidth="2"
         d="M1 5.233L4.522 9 12 1"
       />
     </svg>
