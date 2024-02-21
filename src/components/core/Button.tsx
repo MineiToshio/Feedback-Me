@@ -1,3 +1,4 @@
+import { IconType } from "@/components/core/Icons";
 import { cn } from "@/styles/utils";
 import { VariantProps, cva } from "class-variance-authority";
 import { FC, HTMLAttributes, forwardRef } from "react";
@@ -27,12 +28,16 @@ const buttonVariants = cva(
 );
 
 type ButtonProps = HTMLAttributes<HTMLButtonElement> &
-  VariantProps<typeof buttonVariants>;
+  VariantProps<typeof buttonVariants> & {
+    Icon?: IconType;
+    iconClassName?: string;
+  };
 
 const Button: FC<ButtonProps> = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ color, className, children, ...props }) => {
+  ({ color, className, children, Icon, iconClassName, ...props }) => {
     return (
       <button className={cn(buttonVariants({ color, className }))} {...props}>
+        {Icon && <Icon className={cn("mr-2", iconClassName)} />}
         {children}
       </button>
     );

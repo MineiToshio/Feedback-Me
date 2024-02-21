@@ -15,11 +15,7 @@ export default function RootLayout({
   return (
     <>
       <head>
-        <link
-          rel="icon"
-          href="/assets/favicon.png"
-          type="image/png"
-        />
+        <link rel="icon" href="/assets/favicon.png" type="image/png" />
       </head>
       <html lang="en">
         <body className={jostFont.className}>{children}</body>
