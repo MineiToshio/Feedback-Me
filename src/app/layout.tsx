@@ -13,8 +13,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={jostFont.className}>{children}</body>
-    </html>
+    <>
+      <head>
+        <link
+          rel="icon"
+          href="/assets/favicon.png"
+          type="image/png"
+        />
+      </head>
+      <html lang="en">
+        <body className={jostFont.className}>{children}</body>
+      </html>
+    </>
   );
 }
