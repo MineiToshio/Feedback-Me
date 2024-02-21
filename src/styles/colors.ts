@@ -31,6 +31,10 @@ const colors = {
     light: "#F2F4FE",
     DEFAULT: "#F2F4FE",
   },
+  "background2-hover": {
+    light: "#CFD7FF",
+    DEFAULT: "#CFD7FF",
+  },
   form: {
     light: "#F7F8FD",
     DEFAULT: "#F7F8FD",
