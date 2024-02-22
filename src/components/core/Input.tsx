@@ -16,7 +16,7 @@ const Input: FC<InputProps> = ({
     <div className={cn("flex flex-col", className)}>
       <input
         className={cn(
-          "bg-form rounded-sm text-text text-[15px] px-4 py-[13px] outline-0 focus:outline-1 focus:outline-secondary flex",
+          "bg-form rounded-sm text-text text-[15px] px-4 h-12 outline-0 focus:outline-1 focus:outline-secondary flex",
           {
             "border border-error focus:outline-error": error,
           },
