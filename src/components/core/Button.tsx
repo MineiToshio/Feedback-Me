@@ -34,9 +34,13 @@ type ButtonProps = HTMLAttributes<HTMLButtonElement> &
   };
 
 const Button: FC<ButtonProps> = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ color, className, children, Icon, iconClassName, ...props }) => {
+  ({ color, className, children, Icon, iconClassName, ...props }, ref) => {
     return (
-      <button className={cn(buttonVariants({ color, className }))} {...props}>
+      <button
+        className={cn(buttonVariants({ color, className }))}
+        ref={ref}
+        {...props}
+      >
         {Icon && <Icon className={cn("mr-2", iconClassName)} />}
         {children}
       </button>
