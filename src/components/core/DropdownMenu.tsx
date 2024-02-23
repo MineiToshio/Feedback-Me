@@ -31,7 +31,7 @@ const DropdownMenu: FC<DropdownMenuProps> = ({
         <div
           key={option.value}
           className={cn(
-            "border-b border-text border-opacity-15 px-4 py-3 hover:text-primary relative",
+            "border-b border-text border-opacity-15 px-4 py-3 hover:text-primary relative text-link",
             { "border-b-0": index === options.length - 1 },
           )}
           onClick={() => onChange(option.value)}
