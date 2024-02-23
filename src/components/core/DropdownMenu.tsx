@@ -1,11 +1,7 @@
+import { Option } from "@/hooks/useSelect";
 import { cn } from "@/styles/utils";
 import { FC } from "react";
 import Icon from "./Icons";
-
-export type Option = {
-  label: string;
-  value: number;
-};
 
 type DropdownMenuProps = {
   open?: boolean;

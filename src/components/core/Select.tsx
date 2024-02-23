@@ -1,10 +1,10 @@
 "use client";
 
-import DropdownMenu, { Option } from "@/components/core/DropdownMenu";
+import DropdownMenu from "@/components/core/DropdownMenu";
 import Icon from "@/components/core/Icons";
+import useSelect, { Option } from "@/hooks/useSelect";
 import { cn } from "@/styles/utils";
-import { FC, useMemo, useState } from "react";
-import useHandleOutsideClick from "@/hooks/useHandleOutsideClick";
+import { FC } from "react";
 
 type SelectProps = {
   value?: number;
@@ -14,17 +14,10 @@ type SelectProps = {
 };
 
 const Select: FC<SelectProps> = ({ value, options, onChange, className }) => {
-  const [open, setOpen] = useState<boolean>(false);
-
-  const toggleClose = () => setOpen(false);
-  const toggleOpen = () => setOpen((o) => !o);
-
-  const selectedOption = useMemo(
-    () => options.find((o) => o.value === value),
-    [options, value],
+  const { ref, selectedOption, open, toggleOpen } = useSelect(
+    value,
+    options,
   );
-
-  const ref = useHandleOutsideClick(toggleClose);
 
   return (
     <div
