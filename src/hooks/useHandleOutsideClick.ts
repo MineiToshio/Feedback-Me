@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const useHandleOutsideClick = (callback?: () => void) => {
+const useHandleOutsideClick = (callback: () => void) => {
   const container = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ const useHandleOutsideClick = (callback?: () => void) => {
         container.current &&
         !container.current.contains(event.target as Node)
       ) {
-        callback && callback();
+        callback();
       }
     }
 
